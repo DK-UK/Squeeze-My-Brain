@@ -293,10 +293,7 @@ fun navigation(
                     navController.navigate("${NavDestinations.COMPLETED_SCREEN.name}/$result/${categoryId}/${difficulty}"){
                         launchSingleTop = true
                         navController.popBackStack()
-                        /*popUpTo("${NavDestinations.QUESTION_SCREEN.name}/$categoryId/$difficulty"){
-                            inclusive = false
-                            saveState = false
-                        }*/
+
                     }
                 }
             )
@@ -318,6 +315,7 @@ fun navigation(
             val categoryId: Int = it.arguments!!.getInt("categoryId", 0)
             val difficultyLevel: String = it.arguments!!.getString("difficulty", "")
 
+            onProgress.invoke(0)
             quizCompletedScreen(
                 modifier = modifier,
                 result = result,
@@ -333,10 +331,6 @@ fun navigation(
                     navController.navigate("${NavDestinations.GO_SCREEN.name}/$categoryId"){
                         launchSingleTop = true
                         navController.popBackStack()
-                        /*popUpTo("${NavDestinations.COMPLETED_SCREEN.name}/$result/$categoryId/$difficultyLevel"){
-                            inclusive = false
-                            saveState = false
-                        }*/
                     }
                 },
                 onClose = {
@@ -344,10 +338,6 @@ fun navigation(
                     navController.navigate(NavDestinations.CATEGORY_SCREEN.name){
                         launchSingleTop = true
                         navController.popBackStack()
-                        /*popUpTo("${NavDestinations.COMPLETED_SCREEN.name}/$result/$categoryId/$difficultyLevel"){
-                            inclusive = false
-                            saveState = false
-                        }*/
                     }
                 })
         }

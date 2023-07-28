@@ -171,10 +171,11 @@ fun question(
     onCorrectAnsClicked: () -> Unit
 ) {
 
-    val timer = produceState(initialValue = 1, key1 = questionNumber) {
+    val timer = produceState(initialValue = "1", key1 = questionNumber) {
+
         if (questionEntity.user_selected_ans == null || questionEntity.user_selected_ans.isEmpty()) {
-            for (i in 10 downTo 0) {
-                value = i
+            for (i in 90 downTo 0) {
+                value = Utility.secondsToMinutesSeconds(i)
                 delay(1000)
             }
         }
@@ -278,7 +279,7 @@ fun question(
                 // Timer
                 if (questionEntity.user_selected_ans == null || questionEntity.user_selected_ans.isEmpty()) {
                     Text(
-                        text = "00:${timer.value} left",
+                        text = "${timer.value} left",
                         style = MaterialTheme.typography.bodyMedium
                             .copy(fontWeight = FontWeight.Bold),
                         modifier = Modifier
@@ -299,7 +300,7 @@ fun question(
             }
         }
 
-        if (timer.value == 0) {
+        if (timer.value == "00:00") {
             LaunchedEffect(timer.value) {
                 nextQuestion.invoke(selectedOption)
             }
