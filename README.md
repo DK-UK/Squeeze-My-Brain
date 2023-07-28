@@ -8,7 +8,7 @@ It also provides different difficulty levels for users to choose from.
 
 ## Demo Video
 
-![Watch the video]([https://youtu.be/vt5fpE0bzSY](https://drive.google.com/file/d/1SG1VuAnEZnlFWw-aWGeuLyGfMM7XDRVq/view?usp=drive_link
+![Watch the video]((https://drive.google.com/file/d/1SG1VuAnEZnlFWw-aWGeuLyGfMM7XDRVq/view?usp=drive_link
 )
 
 ## Technologies Used
