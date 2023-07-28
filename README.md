@@ -1,14 +1,19 @@
 # Squeeze My Brain
 
+## Demo Video
+
+[![Watch the video]()](https://drive.google.com/file/d/1SG1VuAnEZnlFWw-aWGeuLyGfMM7XDRVq/view?usp=drive_link)
+
+
+### APK
+![Static Badge](https://img.shields.io/badge/APK-blue?logo=android&logoColor=white&labelColor=grey&link=https%3A%2F%2Fgithub.com%2FDK-UK%2FSqueeze-My-Brain%2Fblob%2Fmaster%2Fapp%2Frelease%2Fapp-release.apk)
+
 ## Overview
 
 Squeeze My Brain is an Android app built with Jetpack Compose that lets users test their knowledge with various quiz questions.
 The app fetches quiz questions from an external API and stores them locally using Room database for offline access.
 It also provides different difficulty levels for users to choose from.
 
-## Demo Video
-
-[![Watch the video]()](https://drive.google.com/file/d/1SG1VuAnEZnlFWw-aWGeuLyGfMM7XDRVq/view?usp=drive_link)
 
 ## Technologies Used
 
